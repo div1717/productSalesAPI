@@ -1,6 +1,6 @@
 // db.js
 const mongoose = require('mongoose');
-const dbURI = 'mongodb+srv://divyansh:divyansh@cluster0.synmv6m.mongodb.net/RoxilerDB?retryWrites=true&w=majority';
+const dbURI = process.env.DB_CONNECTION_URL;
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
