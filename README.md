@@ -31,7 +31,7 @@ List the technologies and libraries used in the project. For example:
 
 Explain the structure of your project directory. You can provide a brief explanation of each file and folder present in the project, as well as their roles. For example:
 
-````project-root
+project-root
 |-- controllers
 | |-- totalSaleAmountController.js
 | |-- totalSoldItemsController.js
@@ -51,7 +51,6 @@ Explain the structure of your project directory. You can provide a brief explana
 |-- README.md
 |-- .gitignore
 |-- package.json
-```
 
 ## Installation
 
@@ -81,7 +80,7 @@ List all the API endpoints available in your project along with their descriptio
 {
   "totalSaleAmount": 12345.67
 }
-````
+```
 
 - `GET http://localhost:3000/statistics/totalSoldItems/:month`
   - Description: Fetch the total number of sold items for a specific month.
