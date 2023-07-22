@@ -1,6 +1,6 @@
 # Project Name
 
-Short project description or introduction goes here.
+`Roxiler Pune Assesment`
 
 ## Table of Contents
 
@@ -24,16 +24,14 @@ List the technologies and libraries used in the project. For example:
 
 - Node.js
 - Express.js
-- MongoDB (or any other database)
-- Mongoose (if using MongoDB)
-- Axios (if making API requests)
-- ... (other dependencies)
+- MongoDB
+- Mongoose
 
 ## Project Structure
 
 Explain the structure of your project directory. You can provide a brief explanation of each file and folder present in the project, as well as their roles. For example:
 
-project-root
+````project-root
 |-- controllers
 | |-- totalSaleAmountController.js
 | |-- totalSoldItemsController.js
@@ -52,7 +50,7 @@ project-root
 |-- index.js
 |-- README.md
 |-- .gitignore
-|-- package.json
+|-- package.json```
 
 ## Installation
 
@@ -72,14 +70,38 @@ For example:
 
 List all the API endpoints available in your project along with their descriptions and expected request/response formats. For example:
 
-- `GET /api/totalSaleAmount/:month`
+- `GET http://localhost:3000/statistics/totalSaleAmount/:month`
   - Description: Fetch the total sale amount for a specific month.
-  - Request Parameters: `month` (string, format: "YYYY-MM")
+  - Request Parameters: `month`
   - Response Format: JSON
   - Response Example:
 
 ```json
 {
   "totalSaleAmount": 12345.67
+}
+````
+
+- `GET http://localhost:3000/statistics/totalSoldItems/:month`
+  - Description: Fetch the total number of sold items for a specific month.
+  - Request Parameters: `month`
+  - Response Format: JSON
+  - Response Example:
+
+```json
+{
+  "totalSoldItems": 150
+}
+```
+
+- `GET http://localhost:3000/statistics/totalNotSoldItems/:month`
+  - Description: Fetch the total number of NOT sold items for a specific month.
+  - Request Parameters: `month`
+  - Response Format: JSON
+  - Response Example:
+
+```json
+{
+  "totalNotSoldItems": 50
 }
 ```
