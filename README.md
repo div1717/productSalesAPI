@@ -11,8 +11,6 @@
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Database](#database)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
@@ -103,5 +101,117 @@ List all the API endpoints available in your project along with their descriptio
 ```json
 {
   "totalNotSoldItems": 50
+}
+```
+
+- `GET http://localhost:3000/barCharts/ItemsInAllPriceRanges/:month`
+  - Description: Fetch the data for a bar chart that shows the number of items falling into specific price ranges for a specific month.
+  - Request Parameters: `month`
+  - Response Format: JSON
+  - Response Example:
+
+```json
+{
+  "barChartData": [
+    {
+      "PriceRange": "0 - 100",
+      "count": 10
+    },
+    {
+      "PriceRange": "101 - 200",
+      "count": 25
+    },
+    {
+      "PriceRange": "201 - 300",
+      "count": 15
+    }
+    // ... and so on for other price ranges
+  ]
+}
+```
+
+- `GET http://localhost:3000/pieCharts/ItemsInUniqueCategories/:month`
+  - Description: Fetch the data for a pie chart that shows the unique categories and the number of items from each category for a specific month.
+  - Request Parameters: `month`
+  - Response Format: JSON
+  - Response Example:
+
+```json
+{
+  "pieChartData": [
+    {
+      "category": "Electronics",
+      "count": 30
+    },
+    {
+      "category": "Clothing",
+      "count": 25
+    },
+    {
+      "category": "Home Decor",
+      "count": 15
+    }
+    // ... and so on for other categories
+  ]
+}
+```
+
+- `GET http://localhost:3000/combineResponses/fetchCombinedData/:month`
+  - Description: Fetch the data from all the above APIs for a specific month, combine the responses, and send a final response of the combined JSON.
+  - Request Parameters: `month`
+  - Response Format: JSON
+  - Response Example:
+
+```json
+{
+  "totalSaleAmount": 12345.67,
+  "totalSoldItems": 50,
+  "totalNotSoldItems": 20,
+  "itemsInAllPriceRanges": [
+    {
+      "PriceRange": "0 - 100",
+      "count": 15
+    },
+    {
+      "PriceRange": "101 - 200",
+      "count": 30
+    },
+    {
+      "PriceRange": "201 - 300",
+      "count": 25
+    }
+    // ... and so on for other price ranges
+  ],
+  "itemsInUniqueCategories": [
+    {
+      "category": "Electronics",
+      "count": 30
+    },
+    {
+      "category": "Clothing",
+      "count": 25
+    },
+    {
+      "category": "Home Decor",
+      "count": 15
+    }
+    // ... and so on for other categories
+  ]
+}
+```
+
+## Database
+
+The project uses MongoDB as the database to store product information. The schema for the "products" collection is as follows:
+
+```{
+  id: Number,          // Unique identifier for the product (integer)
+  title: String,       // Product title (string)
+  price: Number,       // Product price (number)
+  description: String, // Product description (string)
+  category: String,    // Product category (string)
+  image: String,       // URL of the product image (string)
+  sold: Boolean,       // Flag indicating if the product is sold (boolean)
+  dateOfSale: Date,    // Date of sale for the product (date)
 }
 ```
