@@ -1,6 +1,6 @@
 # Project Name
 
-`Roxiler Pune Assesment`
+`ProductSalesAPI (Roxiler Pune Assesment)`
 
 ## Table of Contents
 
@@ -14,11 +14,9 @@
 
 ## Project Overview
 
-Provide a brief overview of the project, its purpose, and goals. Mention the problem it aims to solve or the functionality it provides. Also, highlight any unique features or challenges.
+ProductSalesAPI is a Node.js-based web application for managing and analyzing product data. The application provides various API endpoints to fetch statistics and insights about the products, including total sale amount, total sold items, total not sold items, bar charts representing items in different price ranges, and a pie chart showing the distribution of products in unique categories for a specific month.
 
 ## Technologies Used
-
-List the technologies and libraries used in the project. For example:
 
 - Node.js
 - Express.js
@@ -27,30 +25,11 @@ List the technologies and libraries used in the project. For example:
 
 ## Project Structure
 
-Explain the structure of your project directory. You can provide a brief explanation of each file and folder present in the project, as well as their roles. For example:
-
-```json
-project-root
-|-- controllers
-| |-- totalSaleAmountController.js
-| |-- totalSoldItemsController.js
-| |-- totalNotSoldItemsController.js
-| |-- barChartController.js
-| |-- pieChartController.js
-|-- models
-| |-- model.product.js
-|-- routes
-| |-- totalSaleAmountRoutes.js
-| |-- totalSoldItemsRoutes.js
-| |-- totalNotSoldItemsRoutes.js
-| |-- barChartRoutes.js
-| |-- pieChartRoutes.js
-|-- database.js
-|-- index.js
-|-- README.md
-|-- .gitignore
-|-- package.json
-```
+- controllers: Contains controller functions that handle incoming API requests and process the data.
+- models: Defines the MongoDB schema for the "products" collection.
+- routes: Defines the API routes and links them to corresponding controller functions.
+- database.js: Contains the configuration for connecting to the MongoDB database.
+- index.js: Main entry point of the application that sets up the server and initializes the routes.
 
 ## Installation
 
@@ -58,13 +37,13 @@ Explain how to set up and install the project locally. Include any necessary ste
 
 For example:
 
-1. Clone the repository: git clone https://github.com/div1717/productSalesAPI.git
+1. Clone the repository: `git clone https://github.com/div1717/productSalesAPI.git`
 
-2. Change into the project directory: cd RoxilerPune
+2. Change into the project directory: `cd RoxilerPune`
 
-3. Install dependencies: npm install
+3. Install dependencies: `npm install`
 
-4. To start the server: npm run devStart
+4. To start the server: `npm run devStart`
 
 ## API Endpoints
 
