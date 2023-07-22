@@ -39,8 +39,10 @@ For example:
 1. Clone the repository: `git clone https://github.com/div1717/productSalesAPI.git`
 
 2. Install dependencies: `npm install`
+  
+3. Create a `.env` file and add your mongoDB url with variable name `DB_CONNECTION_URL`
 
-3. To start the server: `npm run devStart`
+5. To start the server: `npm run devStart`
 
 ## API Endpoints
 
