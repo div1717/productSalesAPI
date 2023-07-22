@@ -29,6 +29,7 @@ List the technologies and libraries used in the project. For example:
 
 Explain the structure of your project directory. You can provide a brief explanation of each file and folder present in the project, as well as their roles. For example:
 
+```json
 project-root
 |-- controllers
 | |-- totalSaleAmountController.js
@@ -49,6 +50,7 @@ project-root
 |-- README.md
 |-- .gitignore
 |-- package.json
+```
 
 ## Installation
 
@@ -204,7 +206,8 @@ List all the API endpoints available in your project along with their descriptio
 
 The project uses MongoDB as the database to store product information. The schema for the "products" collection is as follows:
 
-```{
+```json
+{
   id: Number,          // Unique identifier for the product (integer)
   title: String,       // Product title (string)
   price: Number,       // Product price (number)
