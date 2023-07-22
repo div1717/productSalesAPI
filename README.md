@@ -38,11 +38,9 @@ For example:
 
 1. Clone the repository: `git clone https://github.com/div1717/productSalesAPI.git`
 
-2. Change into the project directory: `cd RoxilerPune`
+2. Install dependencies: `npm install`
 
-3. Install dependencies: `npm install`
-
-4. To start the server: `npm run devStart`
+3. To start the server: `npm run devStart`
 
 ## API Endpoints
 
