@@ -50,7 +50,8 @@ Explain the structure of your project directory. You can provide a brief explana
 |-- index.js
 |-- README.md
 |-- .gitignore
-|-- package.json```
+|-- package.json
+```
 
 ## Installation
 
