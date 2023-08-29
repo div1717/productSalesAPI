@@ -1,6 +1,6 @@
 # Project Name
 
-`ProductSalesAPI (Roxiler Pune Assesment)`
+`ProductSalesAPI`
 
 ## Table of Contents
 
